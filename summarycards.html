@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ultimate HR Compliance System</title>
+
+<style>
+
+/* GLOBAL */
+
+body{
+font-family:Segoe UI,Arial;
+margin:0;
+background:#f2f4f8;
+color:#333;
+}
+
+header{
+background:#1c2b3a;
+color:white;
+padding:25px;
+text-align:center;
+font-size:30px;
+font-weight:600;
+}
+
+/* SEARCH */
+
+.search-box{
+text-align:center;
+padding:20px;
+}
+
+.search-box input{
+width:300px;
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+/* GROUP */
+
+.group{
+margin:35px;
+}
+
+.group-title{
+font-size:22px;
+font-weight:600;
+border-left:6px solid #3498db;
+padding-left:12px;
+margin-bottom:20px;
+}
+
+/* CARD GRID */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+/* CARD */
+
+.card{
+background:white;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+cursor:pointer;
+transition:0.3s;
+overflow:hidden;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 28px rgba(0,0,0,0.18);
+}
+
+.card-header{
+padding:18px;
+background:#f7f9fc;
+}
+
+.card-title{
+font-weight:600;
+font-size:18px;
+color:#2c3e50;
+}
+
+.card-sub{
+font-size:13px;
+color:#777;
+margin-top:4px;
+}
+
+/* DETAILS */
+
+.details{
+max-height:0;
+overflow:hidden;
+transition:max-height .5s ease;
+padding:0 20px;
+}
+
+.card.active .details{
+max-height:1000px;
+padding-bottom:20px;
+}
+
+.details div{
+margin:8px 0;
+font-size:13px;
+line-height:1.5;
+}
+
+.label{
+font-weight:600;
+color:#2c3e50;
+}
+
+/* DESKTOP */
+
+@media(min-width:1000px){
+
+.cards{
+grid-template-columns:repeat(3,1fr);
+}
+
+header{
+font-size:34px;
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.search-box input{
+width:90%;
+}
+
+header{
+font-size:24px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>Ultimate HR Compliance System</header>
+
+<div class="search-box">
+<input type="text" id="search" placeholder="Search HR Compliance Acts...">
+</div>
+
+
+<!-- ALL ESTABLISHMENTS -->
+
+<div class="group">
+
+<div class="group-title">Applicable to All Establishments</div>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-header">
+<div class="card-title">Shops and Establishments Act</div>
+<div class="card-sub">Regulates working conditions in shops and offices</div>
+</div>
+
+<div class="details">
+
+<div><span class="label">Objective:</span> Regulates working hours, leave, wages, holidays and employment conditions.</div>
+
+<div><span class="label">Establishment Eligibility:</span> All shops, commercial establishments and offices.</div>
+
+<div><span class="label">Employee Eligibility:</span> All employees working in establishments.</div>
+
+<div><span class="label">Salary Threshold:</span> Not applicable.</div>
+
+<div><span class="label">Minimum Service:</span> Not applicable.</div>
+
+<div><span class="label">Benefits:</span> Weekly off, leave entitlement, regulated working hours.</div>
+
+<div><span class="label">Contribution:</span> None.</div>
+
+<div><span class="label">Registers:</span> Attendance register, wage register, leave register.</div>
+
+<div><span class="label">Returns:</span> As per state rules.</div>
+
+<div><span class="label">Penalties:</span> Monetary penalties for violations.</div>
+
+<div><span class="label">Key Highlights:</span> Mandatory establishment registration.</div>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="card-header">
+<div class="card-title">Labour Welfare Fund</div>
+<div class="card-sub">State welfare scheme</div>
+</div>
+
+<div class="details">
+
+<div><span class="label">Objective:</span> Provides social welfare schemes to workers.</div>
+
+<div><span class="label">Eligibility:</span> Depends on state labour welfare act.</div>
+
+<div><span class="label">Employee Eligibility:</span> Employees earning wages under prescribed limits.</div>
+
+<div><span class="label">Contribution:</span> Employer + Employee contribution.</div>
+
+<div><span class="label">Rate:</span> State specific.</div>
+
+<div><span class="label">Timeline:</span> Half yearly or yearly contribution.</div>
+
+<div><span class="label">Registers:</span> LWF deduction register.</div>
+
+<div><span class="label">Returns:</span> State specific returns.</div>
+
+<div><span class="label">Penalties:</span> Fine for non contribution.</div>
+
+<div><span class="label">Highlights:</span> Funds used for education and welfare schemes.</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- 10 EMPLOYEE ACTS -->
+
+<div class="group">
+
+<div class="group-title">Acts Applicable for 10+ Employees</div>
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="card-header">
+<div class="card-title">ESIC Act</div>
+<div class="card-sub">Employee health insurance</div>
+</div>
+
+<div class="details">
+
+<div><span class="label">Objective:</span> Provides medical and social security benefits.</div>
+
+<div><span class="label">Establishment Eligibility:</span> Factories and establishments with 10+ employees.</div>
+
+<div><span class="label">Employee Eligibility:</span> Employees earning ≤ ₹21,000.</div>
+
+<div><span class="label">Contribution Rate:</span> Employer 3.25%, Employee 0.75%.</div>
+
+<div><span class="label">Benefits:</span> Medical, maternity, sickness, disablement benefits.</div>
+
+<div><span class="label">Registers:</span> Accident register, ESIC register.</div>
+
+<div><span class="label">Returns:</span> Monthly contribution filings.</div>
+
+<div><span class="label">Penalties:</span> Interest, damages and prosecution.</div>
+
+<div><span class="label">Highlights:</span> Covers employees and dependents.</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-header">
+<div class="card-title">Gratuity Act</div>
+<div class="card-sub">Retirement benefit for long service</div>
+</div>
+
+<div class="details">
+
+<div><span class="label">Objective:</span> Provides lump sum payment after long service.</div>
+
+<div><span class="label">Establishment Eligibility:</span> 10+ employees.</div>
+
+<div><span class="label">Employee Eligibility:</span> Minimum 5 years continuous service.</div>
+
+<div><span class="label">Benefit:</span> 15 days wages per completed year.</div>
+
+<div><span class="label">Maximum:</span> ₹20 lakh.</div>
+
+<div><span class="label">Registers:</span> Form F, I, J, K.</div>
+
+<div><span class="label">Returns:</span> As prescribed by labour department.</div>
+
+<div><span class="label">Penalty:</span> Fine and imprisonment.</div>
+
+<div><span class="label">Highlights:</span> Payable on resignation, retirement, death.</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- 20 EMPLOYEE ACTS -->
+
+<div class="group">
+
+<div class="group-title">Acts Applicable for 20+ Employees</div>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-header">
+<div class="card-title">EPF Act</div>
+<div class="card-sub">Provident fund and pension scheme</div>
+</div>
+
+<div class="details">
+
+<div><span class="label">Objective:</span> Retirement savings and pension benefits.</div>
+
+<div><span class="label">Establishment Eligibility:</span> 20+ employees.</div>
+
+<div><span class="label">Employee Eligibility:</span> Salary ≤ ₹15,000.</div>
+
+<div><span class="label">Contribution:</span> Employer 12%, Employee 12%.</div>
+
+<div><span class="label">Benefits:</span> PF savings, pension (EPS), insurance (EDLI).</div>
+
+<div><span class="label">Registers:</span> Form 2, PF registers.</div>
+
+<div><span class="label">Returns:</span> Monthly ECR filing.</div>
+
+<div><span class="label">Penalties:</span> Interest and damages.</div>
+
+<div><span class="label">Highlights:</span> Mandatory deposit before 15th.</div>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="card-header">
+<div class="card-title">Bonus Act</div>
+<div class="card-sub">Profit sharing bonus</div>
+</div>
+
+<div class="details">
+
+<div><span class="label">Eligibility:</span> Establishments with 20+ employees.</div>
+
+<div><span class="label">Employee Limit:</span> Salary ≤ ₹21,000.</div>
+
+<div><span class="label">Minimum Bonus:</span> 8.33%</div>
+
+<div><span class="label">Maximum Bonus:</span> 20%</div>
+
+<div><span class="label">Registers:</span> Form A, B, C.</div>
+
+<div><span class="label">Timeline:</span> Payment within 8 months.</div>
+
+<div><span class="label">Penalty:</span> Fine or imprisonment.</div>
+
+<div><span class="label">Highlights:</span> Set on and set off mechanism.</div>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="card-header">
+<div class="card-title">Contract Labour Act</div>
+<div class="card-sub">Regulates contract employment</div>
+</div>
+
+<div class="details">
+
+<div><span class="label">Eligibility:</span> Establishments employing 20 contract workers.</div>
+
+<div><span class="label">Requirement:</span> Principal employer registration and contractor license.</div>
+
+<div><span class="label">Registers:</span> Muster roll, wage register.</div>
+
+<div><span class="label">Returns:</span> Periodic returns.</div>
+
+<div><span class="label">Penalty:</span> Fine and imprisonment.</div>
+
+<div><span class="label">Highlights:</span> Principal employer responsible for compliance.</div>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="card-header">
+<div class="card-title">BOCW Act</div>
+<div class="card-sub">Construction worker welfare</div>
+</div>
+
+<div class="details">
+
+<div><span class="label">Eligibility:</span> Construction establishments employing 10+ workers.</div>
+
+<div><span class="label">Contribution:</span> 1–2% cess on project cost.</div>
+
+<div><span class="label">Benefit:</span> Welfare board schemes.</div>
+
+<div><span class="label">Registers:</span> Worker safety records.</div>
+
+<div><span class="label">Penalty:</span> Fine and prosecution.</div>
+
+<div><span class="label">Highlights:</span> Mandatory project registration.</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+document.querySelectorAll(".card").forEach(card=>{
+card.addEventListener("click",()=>{
+
+document.querySelectorAll(".card").forEach(c=>{
+if(c!==card) c.classList.remove("active");
+});
+
+card.classList.toggle("active");
+
+});
+});
+
+document.getElementById("search").addEventListener("keyup",function(){
+
+let val=this.value.toLowerCase();
+
+document.querySelectorAll(".card").forEach(card=>{
+
+card.style.display=card.innerText.toLowerCase().includes(val)?"block":"none";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
